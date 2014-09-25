@@ -1,20 +1,22 @@
 @import "normalize.styl"
-@import "fonts01.styl"
+@import "fonts.styl"
 @import "nib"
 
-gris_oscuro = #333333
-gris_claro = #686868
-gris_mas_claro = #D0D2D3
-azul_tw = #5FA9DD
-azul_fb = #3D5A98
 azul_borde = #243554
 azul_borde_tw = #478BB5
+azul_fb = #3D5A98
+azul_tw = #5FA9DD
+gris_claro = #686868
+gris_input = #8C8C8C
+gris_mas_claro = #D0D2D3
+gris_oscuro = #333333
+rojo = #CC2F6F
 
 a 
 	color white
 body
+	font-family 'Varela Round', sans-serif
 	font-size 16px
-
 figure
 	margin 0
 footer
@@ -32,6 +34,36 @@ footer
 		margin-left 1em
 p 
 	margin 0
+
+h3
+		margin 0
+	input
+		background white
+		border 1px solid gris_input
+		border-radius 5px
+		color gris_input
+		display block
+		height 3em
+		margin 0.5em auto
+		padding-left 3.5em
+		width 206px
+		max-width 270px
+		&:focus
+			outline none
+	input[type="submit"]
+		background rojo
+		border 1px solid transparent
+		color white
+		padding 0
+	input[type="text"]
+		background url("../img/iconos/user.png") no-repeat 5% 
+		background-size 17px
+	input[type="email"]
+		background url(../img/iconos/email.png) no-repeat 5% 
+		background-size 21px
+	input[type="password"]
+		background url("../img/iconos/candado.png") no-repeat 5%
+		background-size 18px
 .acceso
 	height 2.5em
 	line-height 2.5em
@@ -66,8 +98,8 @@ p
 	background azul_fb
 	&:before
 		border-right 2.5px solid azul_borde
-		content "\e602"
-		font-family 'sfotipy01'
+		content "\e610"
+		font-family 'sfotipy'
 		font-size 1.3em
 		margin 0 0.5em 0 1.2em
 		padding 0.4em 1em 0.4em 0
@@ -77,8 +109,8 @@ p
 	background azul_tw
 	&:before
 		border-right 2.5px solid azul_borde_tw
-		content "\e603"
-		font-family 'sfotipy01'
+		content "\e611"
+		font-family 'sfotipy'
 		font-size 1.3em
 		margin 0 0.5em 0 1.2em
 		padding 0.4em 1em 0.4em 0
@@ -95,6 +127,19 @@ p
 	text-decoration none
 	width 220px
 
+.registro
+	display none
+	margin 1em auto
+	max-width 290px
+	text-align center
+	width 290px
+.sesion
+	text-align center
+	width 290px
+	margin 1em auto
+	display none
+	input
+		margin-bottom 1em
 .wrap
 	background url("../img/fondo_header.png") no-repeat center center
 	background-size cover
@@ -102,7 +147,7 @@ p
 	height 500px
 	h1
 		font-size 1.5em
-		margin-bottom 2.5em
+		margin-bottom 2rem
 		padding 0
 		text-align center
 		white-space pre-line
@@ -119,7 +164,6 @@ p
 .imagen
 	img 
 		width 100%
-
 .relative
 	position relative
 .left
